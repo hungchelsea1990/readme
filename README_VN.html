@@ -3,422 +3,188 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="file:///c:\Users\dinh.hung.nguyen\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.7\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
-      
-      
-      
-      
+      <link rel="stylesheet" href="file:///c:\Users\nguyendinhhung\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.15\crossnote\dependencies\katex\katex.min.css">
       
       
       
       
       
       <style>
-      /**
- * prism.js Github theme based on GitHub's theme.
- * @author Sam Clarke
- */
-code[class*="language-"],
-pre[class*="language-"] {
-  color: #333;
-  background: none;
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.4;
-
-  -moz-tab-size: 8;
-  -o-tab-size: 8;
-  tab-size: 8;
-
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
-
-/* Code blocks */
-pre[class*="language-"] {
-  padding: .8em;
-  overflow: auto;
-  /* border: 1px solid #ddd; */
-  border-radius: 3px;
-  /* background: #fff; */
-  background: #f5f5f5;
-}
-
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-  padding: .1em;
-  border-radius: .3em;
-  white-space: normal;
-  background: #f5f5f5;
-}
-
-.token.comment,
-.token.blockquote {
-  color: #969896;
-}
-
-.token.cdata {
-  color: #183691;
-}
-
-.token.doctype,
-.token.punctuation,
-.token.variable,
-.token.macro.property {
-  color: #333;
-}
-
-.token.operator,
-.token.important,
-.token.keyword,
-.token.rule,
-.token.builtin {
-  color: #a71d5d;
-}
-
-.token.string,
-.token.url,
-.token.regex,
-.token.attr-value {
-  color: #183691;
-}
-
-.token.property,
-.token.number,
-.token.boolean,
-.token.entity,
-.token.atrule,
-.token.constant,
-.token.symbol,
-.token.command,
-.token.code {
-  color: #0086b3;
-}
-
-.token.tag,
-.token.selector,
-.token.prolog {
-  color: #63a35c;
-}
-
-.token.function,
-.token.namespace,
-.token.pseudo-element,
-.token.class,
-.token.class-name,
-.token.pseudo-class,
-.token.id,
-.token.url-reference .token.variable,
-.token.attr-name {
-  color: #795da3;
-}
-
-.token.entity {
-  cursor: help;
-}
-
-.token.title,
-.token.title .token.punctuation {
-  font-weight: bold;
-  color: #1d3e81;
-}
-
-.token.list {
-  color: #ed6a43;
-}
-
-.token.inserted {
-  background-color: #eaffea;
-  color: #55a532;
-}
-
-.token.deleted {
-  background-color: #ffecec;
-  color: #bd2c00;
-}
-
-.token.bold {
-  font-weight: bold;
-}
-
-.token.italic {
-  font-style: italic;
-}
-
-
-/* JSON */
-.language-json .token.property {
-  color: #183691;
-}
-
-.language-markup .token.tag .token.punctuation {
-  color: #333;
-}
-
-/* CSS */
-code.language-css,
-.language-css .token.function {
-  color: #0086b3;
-}
-
-/* YAML */
-.language-yaml .token.atrule {
-  color: #63a35c;
-}
-
-code.language-yaml {
-  color: #183691;
-}
-
-/* Ruby */
-.language-ruby .token.function {
-  color: #333;
-}
-
-/* Markdown */
-.language-markdown .token.url {
-  color: #795da3;
-}
-
-/* Makefile */
-.language-makefile .token.symbol {
-  color: #795da3;
-}
-
-.language-makefile .token.variable {
-  color: #183691;
-}
-
-.language-makefile .token.builtin {
-  color: #0086b3;
-}
-
-/* Bash */
-.language-bash .token.keyword {
-  color: #0086b3;
-}
-
-/* highlight */
-pre[data-line] {
-  position: relative;
-  padding: 1em 0 1em 3em;
-}
-pre[data-line] .line-highlight-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  display: block;
-  width: 100%;
-}
-
-pre[data-line] .line-highlight {
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: inherit 0;
-  margin-top: 1em;
-  background: hsla(24, 20%, 50%,.08);
-  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
-  pointer-events: none;
-  line-height: inherit;
-  white-space: pre;
-}
-
-pre[data-line] .line-highlight:before, 
-pre[data-line] .line-highlight[data-end]:after {
-  content: attr(data-start);
-  position: absolute;
-  top: .4em;
-  left: .6em;
-  min-width: 1em;
-  padding: 0 .5em;
-  background-color: hsla(24, 20%, 50%,.4);
-  color: hsl(24, 20%, 95%);
-  font: bold 65%/1.5 sans-serif;
-  text-align: center;
-  vertical-align: .3em;
-  border-radius: 999px;
-  text-shadow: none;
-  box-shadow: 0 1px white;
-}
-
-pre[data-line] .line-highlight[data-end]:after {
-  content: attr(data-end);
-  top: auto;
-  bottom: .4em;
-}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
 /* Please visit the URL below for more information: */
 /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
 
       </style>
-    </head>
-    <body for="html-export">
-      <div class="mume markdown-preview  ">
-      <h3 class="mume-header" id="-20130715">2013/07/15</h3>
-
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h3 id="20130715">2013/07/15~ </h3>
 <ul>
-<li>B&#x1EAF;t &#x111;&#x1EA7;u h&#xE0;nh tr&#xEC;nh ki&#x1EBF;m c&#x1A1;m nh&#x1B0; m&#x1ED9;t k&#x129; s&#x1B0; c&#xF4;ng ngh&#x1EC7; th&#xF4;ng tin(n&#xF3;i v&#x1EAD;y th&#xF4;i ch&#x1EE9; l&#xE0;m l&#x1EAD;p tr&#xEC;nh vi&#xEA;n)</li>
-<li>L&#xE0;m vi&#x1EC7;c t&#x1EA1;i m&#x1ED9;t c&#xF4;ng ty oursource(NEV)</li>
-<li>2 tu&#x1EA7;n &#x111;&#x1EA7;u d&#x1ECB;ch t&#xE0;i li&#x1EC7;u cho anh &#x110;&#x1EE9;c(ch&#x1EAF;c test ti&#x1EBF;ng nh&#x1EAD;t &#x1F604;)</li>
-<li>2013/08~ v&#xE0;o d&#x1EF1; &#xE1;n NEViewer d&#xF9;ng c&#xF4;ng ngh&#x1EC7; nh&#x1B0; zend2/html/css/js/graph(chart) build ra webapp(frontend),<br>
-ph&#xED;a backend d&#xF9;ng Java x&#xE2;y d&#x1EF1;ng scheduled batch &#x111;&#x1EC3; get data t&#x1EEB; device, t&#x1EA1;o webservice &#x111;&#x1EC3; frontend t&#x1B0;&#x1A1;ng t&#xE1;c &#x111;&#x1B0;&#x1EE3;c.</li>
-<li>2014/01~ v&#xE0;o d&#x1EF1; &#xE1;n MBPM tham gia kh&#xF3;a training MBPM, d&#xF9;ng n&#xF3; &#x111;&#x1EC3; design workflow, c&#xE1;c setup c&#x1EA7;n thi&#x1EBF;t &#x111;&#x1EC3; build ra webapp ho&#xE0;n ch&#x1EC9;nh. C&#xF4;ng ngh&#x1EC7; s&#x1EED; d&#x1EE5;ng ch&#x1EE7; y&#x1EBF;u l&#xE0; MSSQL, C# v&#xE0; ki&#x1EBF;n th&#x1EE9;c MBPM</li>
-<li>kh&#xF4;ng ph&#x1EA3;i l&#xFA;c n&#xE0;o c&#x169;ng c&#xF3; d&#x1EF1; &#xE1;n n&#xEA;n l&#xFA;c r&#x1EA3;nh ng&#x1ED3;i self-study c&#xE1;c th&#x1EC3; lo&#x1EA1;i java web<br>
-(t&#x1B0;&#x1EDF;ng v&#xE0;o d&#x1EF1; &#xE1;n uranus nh&#x1B0;ng l&#x1EA1;i kh&#xF4;ng &#x111;&#x1B0;&#x1EE3;c asign)</li>
+<li>Bắt đầu hành trình kiếm cơm như một kĩ sư công nghệ thông tin(nói vậy thôi chứ làm lập trình viên)</li>
+<li>Làm việc tại một công ty oursource(NEV)</li>
+<li>2 tuần đầu dịch tài liệu cho anh Đức(chắc test tiếng nhật 😄)</li>
+<li>2013/08~ vào dự án NEViewer dùng công nghệ như zend2/html/css/js/graph(chart) build ra webapp(frontend),<br>
+phía backend dùng Java xây dựng scheduled batch để get data từ device, tạo webservice để frontend tương tác được.</li>
+<li>2014/01~ vào dự án MBPM tham gia khóa training MBPM, dùng nó để design workflow, các setup cần thiết để build ra webapp hoàn chỉnh. Công nghệ sử dụng chủ yếu là MSSQL, C# và kiến thức MBPM</li>
+<li>không phải lúc nào cũng có dự án nên lúc rảnh ngồi self-study các thể loại java web<br>
+(tưởng vào dự án uranus nhưng lại không được asign)</li>
 </ul>
-<h3 class="mume-header" id="-20140507">2014/05/07~</h3>
-
+<h3 id="20140507">2014/05/07~ </h3>
 <ul>
-<li>B&#x1EAF;t &#x111;&#x1EA7;u h&#xE0;nh tr&#xEC;nh xkl&#x111; tr&#xEA;n &#x111;&#x1EA5;t Nh&#x1EAD;t.</li>
-<li>V&#xE0;o ngay d&#x1EF1; &#xE1;n b&#x1EA3;o tr&#xEC; s&#x1EA3;n ph&#x1EA9;m Grandit. S&#x1EA3;n ph&#x1EA9;m &#x111;&#x1B0;&#x1EE3;c build kh&#xE1; hay, c&#xF4;ng ngh&#x1EC7; &#x111;&#x1A1;n gi&#x1EA3;n nh&#x1B0; <a href="http://ASP.NET">ASP.NET</a>, c#, html/css/js.<br>
-C&#xE1;c m&#xE0;n h&#xEC;nh t&#xE1;ch ri&#xEA;ng th&#xE0;nh c&#xE1;c module, quy tr&#xEC;nh ch&#x1EC9;nh s&#x1EED;a code h&#x1EBF;t s&#x1EE9;c chu&#x1EA9;n ch&#x1EC9;nh, &#x111;&#x1A1;n gi&#x1EA3;n.<br>
-C&#x1A1; s&#x1EDF; d&#x1EEF; li&#x1EC7;u d&#xF9;ng MSSQL(SQL server).</li>
+<li>Bắt đầu hành trình xklđ trên đất Nhật.</li>
+<li>Vào ngay dự án bảo trì sản phẩm Grandit. Sản phẩm được build khá hay, công nghệ đơn giản như <a href="http://ASP.NET">ASP.NET</a>, c#, html/css/js.<br>
+Các màn hình tách riêng thành các module, quy trình chỉnh sửa code hết sức chuẩn chỉnh, đơn giản.<br>
+Cơ sở dữ liệu dùng MSSQL(SQL server).</li>
 </ul>
-<h3 class="mume-header" id="-20141001">2014/10/01~</h3>
-
+<h3 id="201410">2014/10~ </h3>
 <ul>
-<li>Do Grandit kh&#xF4;ng b&#x1EA3;o tr&#xEC; n&#x1EEF;a, h&#x1EBF;t vi&#x1EC7;c n&#xEA;n sang ng&#x1ED3;i &#x1EDF; ph&#xF2;ng kaigai, &#x111;i theo s&#x1EBF;p H&#xE0; sale d&#x1EF1; &#xE1;n.(th&#x1EF1;c ra &#x111;i lon ton cho bi&#x1EBF;t th&#xF4;i)<br>
-V&#xED; d&#x1EE5;: l&#x1EA5;y &#x111;&#x1B0;&#x1EE3;c d&#x1EF1; &#xE1;n call center c&#x1EE7;a kh&#xE1;ch h&#xE0;ng collabos</li>
+<li>Do Grandit không bảo trì nữa, hết việc nên sang ngồi ở phòng kaigai, đi theo sếp Hà sale dự án.(thực ra đi lon ton cho biết thôi)<br>
+Ví dụ: lấy được dự án call center của khách hàng collabos</li>
 </ul>
 <ul>
 <li>2014/11/15~
 <ul>
-<li>Ph&#xF2;ng BPM c&#xF3; d&#x1EF1; &#xE1;n li&#xEA;n quan t&#xED; t&#x1EDB;i Process360, l&#xE0;m v&#x1EDB;i PM(oono-san).</li>
-<li>L&#xE0;m &#x111;&#x1A1;n gi&#x1EA3;n, code <a href="http://VB.NET">VB.NET</a>, c#, windows services</li>
-<li>Thi tho&#x1EA3;ng test, thi tho&#x1EA3;ng l&#xE0;m v&#x1EDB;i Chigira-san m&#x1ED9;t v&#xE0;i sample(kh&#xF4;ng nh&#x1EDB; t&#xEA;n), gi&#x1EBF;t th&#x1EDD;i gian &#x111;&#x1EC3; s&#x1EAF;p t&#x1EDB;i sang group ACC.</li>
+<li>Phòng BPM có dự án liên quan tí tới Process360, làm với PM(oono-san).</li>
+<li>Làm đơn giản, code <a href="http://VB.NET">VB.NET</a>, c#, windows services</li>
+<li>Thi thoảng test, thi thoảng làm với Chigira-san một vài sample(không nhớ tên), giết thời gian để sắp tới sang group ACC.</li>
 </ul>
 </li>
 </ul>
-<h3 class="mume-header" id="-201504">2015/04~</h3>
-
+<h3 id="201504">2015/04~ </h3>
 <ul>
-<li>V&#xE0;o GroupACC, ph&#xE1;t tri&#x1EC3;n h&#x1EC7; th&#x1ED1;ng qu&#x1EA3;n l&#xFD; &#x111;&#xF2;i n&#x1EE3;</li>
-<li>tham gia v&#x1EDB;i vai tr&#xF2; BSE c&#xF9;ng Hi&#x1EBF;u</li>
-<li>c&#xF3; team offshore &#x1EDF; VN</li>
-<li>tr&#x1EA3;i qua nhi&#x1EC1;u d&#x1EF1; &#xE1;n t&#x1EEB; POC cho &#x111;&#x1EBF;n fixbug h&#x1EC7; th&#x1ED1;ng c&#x169;(Delphi)</li>
+<li>Vào GroupACC, phát triển hệ thống quản lý đòi nợ</li>
+<li>tham gia với vai trò BSE cùng Hiếu</li>
+<li>có team offshore ở VN</li>
+<li>trải qua nhiều dự án từ POC cho đến fixbug hệ thống cũ(Delphi)</li>
 </ul>
 <ul>
 <li>2016/04~
 <ul>
-<li>ph&#xE1;t tri&#x1EC3;n ACCBEAR product(web app) s&#x1EED; d&#x1EE5;ng J2EE/Oracle</li>
-<li>ch&#x1ECB;u tr&#xE1;ch nhi&#x1EC7;m offshore</li>
-<li>ch&#x1ECB;u tr&#xE1;ch nhi&#x1EC7;m ph&#xE2;n t&#xED;ch y&#xEA;u c&#x1EA7;u k/h</li>
-<li>ch&#x1ECB;u tr&#xE1;ch nhi&#x1EC7;m b&#xE1;o c&#xE1;o ti&#x1EBF;n &#x111;&#x1ED9;</li>
+<li>phát triển ACCBEAR product(web app) sử dụng J2EE/Oracle</li>
+<li>chịu trách nhiệm offshore</li>
+<li>chịu trách nhiệm phân tích yêu cầu k/h</li>
+<li>chịu trách nhiệm báo cáo tiến độ</li>
 </ul>
 </li>
 </ul>
-<h3 class="mume-header" id="-201704">2017/04~</h3>
-
+<h3 id="201704">2017/04~ </h3>
 <ul>
-<li>ACCBEAR g&#x1EA7;n nh&#x1B0; ph&#xE1;t tri&#x1EC3;n xong, test xong ITa/b n&#xEA;n mu&#x1ED1;n chuy&#x1EC3;n d&#x1EF1; &#xE1;n</li>
-<li>cu&#x1ED1;i th&#xE1;ng 4 v&#x1EC1; vn 3 tu&#x1EA7;n c&#x1B0;&#x1EDB;i v&#x1EE3; xong sang d&#x1EF1; &#xE1;n m&#x1EDB;i Ishidan DRM</li>
-<li>m&#x1ED9;t lo&#x1EA1;t c&#xE1;c c&#xF4;ng ngh&#x1EC7; m&#x1EDB;i &#x111;&#x1B0;&#x1EE3;c m&#x1EDF; ra, ti&#x1EBF;p c&#x1EAD;n s&#xE2;u s&#x1EAF;c<br>
-v&#xED; d&#x1EE5;: Git/Vagrant/Docker/Ansible/Angular2(JS)/Play framework(Java)/API</li>
-<li>&#x111;&#x1EC3;n 2017/08 th&#xEC; d&#x1EF1; &#xE1;n ng&#x1ECF;m c&#x1EE7; t&#x1ECF;i</li>
+<li>ACCBEAR gần như phát triển xong, test xong ITa/b nên muốn chuyển dự án</li>
+<li>cuối tháng 4 về vn 3 tuần cưới vợ xong sang dự án mới Ishidan DRM</li>
+<li>một loạt các công nghệ mới được mở ra, tiếp cận sâu sắc<br>
+ví dụ: Git/Vagrant/Docker/Ansible/Angular2(JS)/Play framework(Java)/API</li>
+<li>đển 2017/08 thì dự án ngỏm củ tỏi</li>
 </ul>
 <ul>
 <li>2017/09~
 <ul>
-<li>v&#xE0;o phase UAT c&#x1EE7;a product BPM</li>
-<li>v&#x1EEB;a l&#xE0;m v&#x1EEB;a c&#xE0; ph&#xEA; &#x111;&#x1EBF;n t&#x1EA7;m 2017/10~ th&#xEC; c&#xF3; &#xFD; &#x111;&#x1ECB;nh chuy&#x1EC3;n vi&#x1EC7;c</li>
-<li>b&#x1EAF;t &#x111;&#x1EA7;u trau &#x111;&#x1ED3;i t&#xED; skills &#x111;&#x1EC3; chuy&#x1EC3;n vi&#x1EC7;c</li>
+<li>vào phase UAT của product BPM</li>
+<li>vừa làm vừa cà phê đến tầm 2017/10~ thì có ý định chuyển việc</li>
+<li>bắt đầu trau đồi tí skills để chuyển việc</li>
 </ul>
 </li>
 <li>2017/11~
 <ul>
-<li>ph&#x1ECF;ng v&#x1EA5;n c&#xE1;c ki&#x1EC3;u r&#x1ED3;i ch&#x1ECD;n b&#x1EBF;n &#x111;&#x1ED7; m&#x1EDB;i IMJ v&#x1EDB;i m&#x1EE9;c l&#x1B0;&#x1A1;ng b&#xE8;o(nh&#x1B0;ng th&#xF4;i ch&#x1EA5;p nh&#x1EAD;n &#x111;&#x1EC3; kh&#xE1; h&#x1A1;n)</li>
+<li>phỏng vấn các kiểu rồi chọn bến đỗ mới IMJ với mức lương bèo(nhưng thôi chấp nhận để khá hơn)</li>
 </ul>
 </li>
 </ul>
-<h4 class="mume-header" id="--20171231-k%E1%BA%BFt-th%C3%BAc-nev-">------------------------2017/12/31 K&#x1EBF;t th&#xFA;c NEV-------------------------------</h4>
-
-<h3 class="mume-header" id="-2018">2018~</h3>
-
+<h4 id="-20171231-kết-thúc-nev-">------------------------2017/12/31 Kết thúc NEV------------------------------- </h4>
+<h3 id="2018">2018~ </h3>
 <ul>
-<li>b&#x1EAF;t &#x111;&#x1EA7;u cu&#x1ED9;c s&#x1ED1;ng m&#x1EDB;i &#x1EDF; n&#x1A1;i &#x1EDF; m&#x1EDB;i, c&#xF4;ng ty m&#x1EDB;i</li>
-<li>6 tu&#x1EA7;n &#x111;&#x1EA7;u asign d&#x1EF1; &#xE1;n n&#x1ECD; kia, test c&#xE1;i n&#x1ECD; c&#xE1;i kia cho h&#x1EBF;t ng&#xE0;y</li>
+<li>bắt đầu cuộc sống mới ở nơi ở mới, công ty mới</li>
+<li>6 tuần đầu asign dự án nọ kia, test cái nọ cái kia cho hết ngày</li>
 </ul>
 <ul>
 <li>2018/02~2018/09
 <ul>
-<li>SFJphase2: ph&#xE1;t tri&#x1EC3;n th&#xEA;m m&#x1EDB;i v&#xE0;i ch&#x1EE9;c n&#x103;ng s&#x1EED; d&#x1EE5;ng Jelly-CMS</li>
-<li>SFJoversea: ph&#xE1;t tri&#x1EC3;n th&#xEA;m site qu&#x1ED1;c t&#x1EBF; c&#x169;ng s&#x1EED; d&#x1EE5;ng Jelly-CMS</li>
-<li>ch&#x1ECB;u tr&#xE1;ch nhi&#x1EC7;m k&#x129; thu&#x1EAD;t ch&#xED;nh, release s&#x1EA3;n ph&#x1EA9;m</li>
+<li>SFJphase2: phát triển thêm mới vài chức năng sử dụng Jelly-CMS</li>
+<li>SFJoversea: phát triển thêm site quốc tế cũng sử dụng Jelly-CMS</li>
+<li>chịu trách nhiệm kĩ thuật chính, release sản phẩm</li>
 </ul>
 </li>
 <li>2018/09~2019/04
 <ul>
-<li>v&#xE0;o d&#x1EF1; &#xE1;n 5DS</li>
-<li>ban &#x111;&#x1EA7;u l&#xE0; phase BD, thi&#x1EBF;t k&#x1EBF; uml, flow x&#x1EED; l&#xFD;</li>
-<li>2018/11~2019/01: can thi&#x1EC7;p s&#xE2;u v&#xE0;o Jelly-CMS &#x111;&#x1EC3; th&#xEA;m m&#x1EDB;i ch&#x1EE9;c n&#x103;ng, s&#x1EED;a l&#x1ED7;i(h&#x1ECD;c &#x111;&#x1B0;&#x1EE3;c kh&#xE1; nhi&#x1EC1;u c&#xF4;ng ngh&#x1EC7;, c&#xE1;ch &#x111;&#x1ECD;c code)</li>
-<li>2019/02~2019/04: ch&#x1ECB;u tr&#xE1;ch nhi&#x1EC7;m ch&#xED;nh module aws-lambda</li>
-<li>2019/03~2019/04: support dev/test module 5ds-cms(twig-coding l&#xE0; ch&#xED;nh)</li>
+<li>vào dự án 5DS</li>
+<li>ban đầu là phase BD, thiết kế uml, flow xử lý</li>
+<li>2018/11~2019/01: can thiệp sâu vào Jelly-CMS để thêm mới chức năng, sửa lỗi(học được khá nhiều công nghệ hay và mới, cải thiện cách đọc code hiệu quả)</li>
+<li>2019/02~2019/04: chịu trách nhiệm chính module aws-lambda</li>
+<li>2019/03~2019/04: support dev/test module 5ds-cms(twig-coding là chính)</li>
 </ul>
 </li>
 </ul>
-<h3 class="mume-header" id="-201905202203">2019/05~2022/03</h3>
-
+<h3 id="201905202203">2019/05~2022/03 </h3>
 <ul>
-<li>gia nh&#x1EAD;p team l&#xE0;m vi&#x1EC7;c v&#x1EDB;i kh&#xE1;ch h&#xE0;ng misumi</li>
-<li>B&#x1EA3;o tr&#xEC;, v&#x1EAD;n h&#xE0;nh ec-site nh&#x1B0;ng ch&#x1EC9; li&#xEA;n quan t&#x1EDB;i ph&#x1EA7;n ec-front, call api &#x111;&#x1EC3; l&#x1EA5;y d&#x1EEF; li&#x1EC7;u v&#xE0; hi&#x1EC3;n th&#x1ECB;.</li>
-<li>Ki&#x1EBF;n tr&#xFA;c th&#xEC; kh&#xF4;ng c&#xF3; g&#xEC; ph&#x1EE9;c t&#x1EA1;p( framework php t&#x1EF1; build, html/css/js thu&#x1EA7;n), t&#x1B0;&#x1A1;ng t&#xE1;c api v&#xE0; hi&#x1EC3;n th&#x1ECB; m&#xE0;n h&#xEC;nh.</li>
-<li>C&#xE1;c d&#x1EF1; &#xE1;n &#x111;&#xE1;ng ch&#xFA; &#xFD;
+<li>gia nhập team làm việc với khách hàng misumi</li>
+<li>Bảo trì, vận hành ec-site nhưng chỉ liên quan tới phần ec-front, call api để lấy dữ liệu và hiển thị.</li>
+<li>Kiến trúc thì không có gì phức tạp( framework php tự build, html/css/js thuần), tương tác api và hiển thị màn hình.</li>
+<li>Các dự án đáng chú ý
 <ul>
-<li>X&#xE2;y d&#x1EF1;ng webview hi&#x1EC3;n th&#x1ECB; danh m&#x1EE5;c, th&#xF4;ng tin chi ti&#x1EBF;t s&#x1EA3;n ph&#x1EA9;m v&#xE0; t&#x1B0;&#x1A1;ng t&#xE1;c v&#x1EDB;i windows apps.</li>
-<li>X&#xE2;y d&#x1EF1;ng trang download th&#xF4;ng tin CAD 2D c&#x1EE7;a s&#x1EA3;n ph&#x1EA9;m s&#x1EED; d&#x1EE5;ng AWS services(Cloudfront/ApiGateway/Lambda)</li>
-<li>X&#xE2;y d&#x1EF1;ng mypage c&#x1EE7;a trang ec-site hi&#x1EC3;n th&#x1ECB; c&#xE1;c th&#xF4;ng tin nh&#x1B0; coupon, l&#x1ECB;ch s&#x1EED; &#x111;&#x1EB7;t h&#xE0;ng, b&#xE1;o gi&#xE1;, danh s&#xE1;ch s&#x1EA3;n ph&#x1EA9;m &#x111;&#xE3; l&#x1B0;u.</li>
-<li>X&#xE2;y d&#x1EF1;ng ec-site(b&#x1EA3;n Thailand), th&#xEA;m hi&#x1EC3;n th&#x1ECB; ti&#x1EBF;ng th&#xE1;i(kh&#xF4;ng d&#xF9;ng d&#x1ECB;ch t&#x1EF1; &#x111;&#x1ED9;ng)</li>
-<li>S&#x1EED; d&#x1EE5;ng Google Translate API v&#xE0;o d&#x1ECB;ch t&#x1EF1; &#x111;&#x1ED9;ng cho trang ec-site b&#x1EA3;n Vietnam v&#xE0; Indonesia. C&#xF3; s&#x1EED; d&#x1EE5;ng Amazon ElastiCache &#x111;&#x1EC3; ti&#x1EBF;t ki&#x1EC7;m chi ph&#xED;.</li>
-<li>X&#xE2;y d&#x1EF1;ng top page c&#x1EE7;a ec-site hi&#x1EC3;n th&#x1ECB; th&#xF4;ng tin c&#xE1; nh&#xE2;n h&#xF3;a cho t&#x1EEB;ng ng&#x1B0;&#x1EDD;i d&#xF9;ng.</li>
-<li>Th&#xEA;m m&#x1EDB;i ch&#x1EE9;c n&#x103;ng cho ec-site gi&#xFA;p user tra c&#x1EE9;u chi ti&#x1EBF;t th&#xF4;ng tin li&#xEA;n quan t&#x1EDB;i ti&#xEA;u chu&#x1EA9;n Rohs c&#x1EE7;a s&#x1EA3;n ph&#x1EA9;m. Xu&#x1EA5;t pdf v&#x1EDB;i l&#x1B0;&#x1EE3;ng d&#x1EEF; li&#x1EC7;u l&#x1EDB;n s&#x1EED; d&#x1EE5;ng DocurainPDF</li>
-<li>Th&#xEA;m m&#x1EDB;i ch&#x1EE9;c n&#x103;ng cho mobile app v&#x1EDB;i t&#x1B0; c&#xE1;ch l&#xE0; PM, tham gia ph&#xE2;n t&#xED;ch y&#xEA;u c&#x1EA7;u, b&#xE1;o gi&#xE1;, qu&#x1EA3;n l&#xFD; phase thi&#x1EBF;t k&#x1EBF; ph&#xE1;t tri&#x1EC3;n, ti&#x1EBF;n h&#xE0;nh release d&#x1EF1; &#xE1;n.</li>
-<li>X&#xE2;y d&#x1EF1;ng frontend cho &#x1EE9;ng d&#x1EE5;ng web d&#xF9;ng &#x111;&#x1EC3; qu&#x1EA3;n l&#xFD;, ch&#x1EC9;nh s&#x1EED;a, l&#x1B0;u k&#x1EBF;t qu&#x1EA3; nh&#x1EAD;n di&#x1EC7;n c&#x1EE7;a 1 form d&#x1EA1;ng pdf ho&#x1EB7;c images. Tuy nhi&#xEA;n c&#xF4;ng vi&#x1EC7;c ch&#xED;nh l&#xE0; thi&#x1EBF;t k&#x1EBF; API Interface &#x111;&#x1EC3; ph&#xED;a frontend v&#xE0; backendAPI c&#xF3; th&#x1EC3; connect &#x111;&#x1B0;&#x1EE3;c.</li>
+<li>Xây dựng webview hiển thị danh mục, thông tin chi tiết sản phẩm và tương tác với windows apps.</li>
+<li>Xây dựng trang download thông tin CAD 2D của sản phẩm sử dụng AWS services(Cloudfront/ApiGateway/Lambda)</li>
+<li>Xây dựng mypage của trang ec-site hiển thị các thông tin như coupon, lịch sử đặt hàng, báo giá, danh sách sản phẩm đã lưu.</li>
+<li>Xây dựng ec-site(bản Thailand), thêm hiển thị tiếng thái(không dùng dịch tự động)</li>
+<li>Sử dụng Google Translate API vào dịch tự động cho trang ec-site bản Vietnam và Indonesia. Có sử dụng Amazon ElastiCache để tiết kiệm chi phí.</li>
+<li>Xây dựng top page của ec-site hiển thị thông tin cá nhân hóa cho từng người dùng.</li>
+<li>Thêm mới chức năng cho ec-site giúp user tra cứu chi tiết thông tin liên quan tới tiêu chuẩn Rohs của sản phẩm. Xuất pdf với lượng dữ liệu lớn sử dụng DocurainPDF</li>
+<li>Thêm mới chức năng cho mobile app với tư cách là PM, tham gia phân tích yêu cầu, báo giá, quản lý phase thiết kế phát triển, tiến hành release dự án.</li>
+<li>Xây dựng frontend cho ứng dụng web dùng để quản lý, chỉnh sửa, lưu kết quả nhận diện của 1 form dạng pdf hoặc images. Tuy nhiên công việc chính là thiết kế API Interface để phía frontend và backendAPI có thể connect được.</li>
 </ul>
 </li>
+<li>Vai trò chủ yếu: Tech-lead, PM, Presale</li>
 </ul>
-<h3 class="mume-header" id="-202204">2022/04</h3>
-
+<h3 id="202204202205">2022/04~2022/05 </h3>
 <ul>
-<li>vi&#x1EC7;c b&#xEA;n team misumi &#xED;t d&#x1EA7;n n&#xEA;n &#x111;&#x1B0;&#x1EE3;c asign sang d&#x1EF1; &#xE1;n CCS. &#x111;&#xE2;y l&#xE0; s&#x1EA3;n ph&#x1EA9;m c&#x1EE7;a 1 c&#xF4;ng ty b&#x1ECB; Accenture mua l&#x1EA1;i.</li>
-<li>c&#xF4;ng vi&#x1EC7;c ch&#xED;nh l&#xE0; nh&#x1EAD;n y&#xEA;u c&#x1EA7;u c&#x1EA3;i thi&#x1EC7;n t&#xED;nh n&#x103;ng, &#x111;&#xE1;nh gi&#xE1;, &#x111;&#x1B0;a ra ph&#x1B0;&#x1A1;ng &#xE1;n tri&#x1EC3;n khai v&#xE0; th&#x1EA9;m &#x111;&#x1ECB;nh k&#x1EBF;t qu&#x1EA3;.</li>
-<li>c&#xF4;ng ngh&#x1EC7; s&#x1EED; d&#x1EE5;ng ch&#x1EE7; y&#x1EBF;u l&#xE0;: Nodejs, AWS Lambda, AWS Fargate, AWS Api Gateway, AWS Aurora, CloudWatch.</li>
-<li>ph&#xED;a th&#x1B0;&#x1EE3;ng t&#x1EA7;ng c&#x1EAF;t gi&#x1EA3;m ng&#xE2;n s&#xE1;ch cho d&#x1EF1; &#xE1;n n&#xEA;n b&#x1ECB; d&#x1EEB;ng gi&#x1EEF;a ch&#x1EEB;ng. Tuy nhi&#xEA;n c&#x169;ng k&#x1ECB;p ho&#xE0;n thi&#x1EC7;n &#x111;i&#x1EC1;u tra, &#x111;&#x1B0;a ra ph&#x1B0;&#x1A1;ng &#xE1;n ch&#x1EC9;nh s&#x1EED;a &#x111;&#x1ED1;i v&#x1EDB;i deadlock bug c&#x1EE7;a x&#x1EED; l&#xFD; batch import d&#x1EEF; li&#x1EC7;u.</li>
+<li>việc bên team misumi ít dần nên được asign sang dự án CCS. đây là sản phẩm của 1 công ty bị Accenture mua lại.</li>
+<li>công việc chính là nhận yêu cầu cải thiện tính năng, đánh giá, đưa ra phương án triển khai và thẩm định kết quả.</li>
+<li>công nghệ sử dụng chủ yếu là: Nodejs, AWS Lambda, AWS Fargate, AWS Api Gateway, AWS Aurora, CloudWatch vv...</li>
+<li>phía thượng tầng cắt giảm ngân sách cho dự án nên bị dừng giữa chừng. Tuy nhiên cũng kịp hoàn thiện điều tra, đưa ra phương án chỉnh sửa đối với deadlock bug của xử lý batch import dữ liệu.</li>
 </ul>
-<h3 class="mume-header" id="-202205202302">2022/05~2023/02</h3>
-
+<h3 id="202205202302">2022/05~2023/02 </h3>
 <ul>
-<li>b&#xEA;n team misumi l&#x1EA1;i c&#xF3; vi&#x1EC7;c c&#x1EA7;n tr&#x1EE3; gi&#xFA;p n&#xEA;n back l&#x1EA1;i t&#x1EA7;m g&#x1EA7;n 1 n&#x103;m &#x111;&#x1EC3; gi&#x1EA3;i quy&#x1EBF;t gi&#xFA;p.</li>
-<li>ti&#x1EBF;p t&#x1EE5;c v&#x1EDB;i vai tr&#xF2; l&#xE0;m team-lead gi&#x1EA3;i quy&#x1EBF;t c&#xE1;c v&#x1EA5;n &#x111;&#x1EC1; k&#x129; thu&#x1EAD;t, ki&#x1EC3;m so&#xE1;t ch&#x1EA5;t l&#x1B0;&#x1EE3;ng s&#x1EA3;n ph&#x1EA9;m d&#x1EF1; &#xE1;n.</li>
+<li>bên team misumi lại có việc cần trợ giúp nên back lại tầm gần 1 năm để giải quyết giúp.</li>
+<li>tiếp tục với vai trò làm PM/team-lead, giải quyết các vấn đề kĩ thuật, kiểm soát chất lượng sản phẩm dự án.</li>
 </ul>
-<h3 class="mume-header" id="-202303">2023/03~</h3>
-
+<h3 id="202303202412">2023/03~2024/12 </h3>
 <ul>
-<li>
-<ol>
-<li>&#x111;ang t&#xEC;m ki&#x1EBF;m job l&#xE0;m &#x111;&#x1B0;&#x1EE3;c nhi&#x1EC1;u v&#x1EC1; cloud(aws/gcp/azure), network-infra, hi&#x1EC3;u s&#xE2;u th&#xEA;m v&#x1EC1; ki&#x1EBF;n tr&#xFA;c h&#x1EC7; th&#x1ED1;ng &#x111;&#x1EC3; ti&#x1EBF;n t&#x1EDB;i vai tr&#xF2; l&#xE0; ki&#x1EBF;n tr&#xFA;c s&#x1B0; gi&#x1EA3;i ph&#xE1;p (Solution Architech Engineer)</li>
-</ol>
+<li>Team misumi lại ít việc dần, nên chuyển giao lại cho member khác và được assign dự án mới.</li>
+<li>Dự án lần này có khách hàng là Aniplex kinh doanh các sản phẩm liên quan tới anime, hoạt hình, âm nhạc, game</li>
+<li>Khi ACN mua lại 1 công ty tên là Businet thì move toàn bộ team này sang ACN và bây giờ mình join vào.</li>
+<li>Service chính gồm có 1 trang ec-site(front) để user tìm kiếm sản phẩm, đặt hàng, và hệ thống quản lý đơn hàng, chuyển phát phía sau</li>
+<li>front thì dùng product của bên Salesforce(dạng PAAS? SAAS?), phía backend thì tự build sản phẩm tên là CCS</li>
+<li>Trước mắt thì phía CCS khá nhiều bug phát sinh nên tập trung support team cải thiện nâng cao chất lượng, sao cho hệ thống chạy mượt mà.</li>
+<li>Công nghệ bên phía CCS
+<ul>
+<li>Màn hình quản lý đơn hàng, xuất hàng, thanh toán vv... thì sử dụng vuejs, call API và render SPA page.</li>
+<li>API thì sử dụng Apigateway, lambda là chủ yếu</li>
+<li>Batch xử lý dữ liệu thì Lambda, Fargate là chủ yếu.</li>
+<li>Database thì dùng Aurora, DynamoDB</li>
+<li>Có sử dụng các service khác của amazon như Cloudfront, S3, Opensearch, RDS,vv..</li>
+<li>tương tác hệ thống ngoài qua API, SFTP vv...</li>
+<li>phần thanh toán sử dụng veritrans, sonypayment ...</li>
+<li>nhìn chung khá đơn giản và có thể bắt kịp nhanh được.</li>
+</ul>
 </li>
-<li>
-<ol start="2">
-<li>ho&#x1EB7;c ti&#x1EBF;n s&#xE2;u th&#xEA;m v&#x1EC1; c&#xF4;ng vi&#x1EC7;c TL/PM c&#x1EA7;n l&#xE0;m, c&#xE1;ch b&#xE1;o gi&#xE1; sale d&#x1EF1; &#xE1;n, l&#x1EA5;y ch&#x1EE9;ng ch&#x1EC9; PMP, ti&#x1EBF;n l&#xEA;n l&#xE0;m qu&#x1EA3;n l&#xFD; trong t&#x1B0;&#x1A1;ng lai.</li>
-</ol>
-</li>
+<li>Vai trò là quản lý 1 domain nghiệp vụ, làm PM/Team-lead/Presales quản lý dự án, lấy dự án của khách.</li>
 </ul>
-<p>Tham kh&#x1EA3;o c&#xE1;c vi&#x1EBF;t CV d&#x1EA1;ng markdown<br>
+<h4 id="-20241231-kết-thúc-imjaccenture-japan-">------------------------2024/12/31 Kết thúc IMJ/Accenture Japan------------------------------- </h4>
+<h3 id="202501">2025/01~ </h3>
+<ul>
+<li>Sau 7 năm làm việc khá dài ở công ty nhật, phấn đấu đến vị trí Level 8(khá cao) thì quyết định chuyển việc sang Fabbi-Japan</li>
+<li>Với vai trò Presales hy vọng sẽ tận dụng được kinh nghiệm, năng lực từ trước đến nay để mõm rồi lấy được nhiều dự án.</li>
+</ul>
+<p>Tham khảo các viết CV dạng markdown<br>
 <a href="https://github.com/Sa2Knight/Curriculum-Vitae">https://github.com/Sa2Knight/Curriculum-Vitae</a></p>
 
       </div>
       
       
-    
-    
     
     
     
