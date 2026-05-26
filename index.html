@@ -1,440 +1,515 @@
-<!DOCTYPE html><html><head>
-      <title>README</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-      <link rel="stylesheet" href="file:////Users/hungnd/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.8.19/crossnote/dependencies/katex/katex.min.css">
-      
-      
-      
-      
-      
-      <style>
-      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
-/* Please visit the URL below for more information: */
-/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Henry Nguyen - Quick Resume JP</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #5c6472;
+      --line: #d9dee8;
+      --paper: #ffffff;
+      --soft: #f5f7fb;
+      --accent: #0f766e;
+      --accent-dark: #115e59;
+      --warn: #b45309;
+      --blue: #1d4ed8;
+      --shadow: 0 16px 40px rgba(23, 32, 51, 0.10);
+    }
 
-      </style>
-      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function () {
-    // your code here
-  });
-</script></head><body for="html-export">
-    
-    
-      <div class="crossnote markdown-preview  ">
-      
-<div style="text-align: right">2025年01月現在</div>
-<h2 id="自己紹介">自己紹介 </h2>
-<p>初めまして。ベトナムから来ましたグエン・ディン・ホンです。</p>
-<p>高校生の頃から技術系（電気、電子、機械）に興味があったので、<br>
-エンジニアに憧れてベトナム理系トップであるハノイ工科大学で勉強することにしました。</p>
-<p>IT学部でプログラミング言語(C言語)をはじめ、アルゴリズム、ネットワーク・通信技術、<br>
-セキュリティ、WEB開発を学びました。それに、日本語も勉強して、卒業までに<br>
-日本語ができるかつIT技術を持つ人材になれるように一生懸命頑張りました。</p>
-<p>2013年に大学を卒業した後、プログラマーとしてPHP/Java、Webなどの様々言語で<br>
-コーディングした。それから、詳細設計→基本設計、テスト設計を作成したり、<br>
-タスク管理、スケジュール、進捗管理などをしたりすることができるようになって、<br>
-どんどんチームリーダー、プロジェクトマネージャーへ昇進しました。</p>
-<p>2021年から、これまでのシステム開発全般経験かつ、様々な業務分野の知識を活かして、<br>
-プリセールとして営業活動・提案活動を行い、案件を多く獲得するように日々努力しています。</p>
-<p>どうぞよろしくお願いいたします。</p>
-<h2 id="基本情報">基本情報 </h2>
-<table>
-<thead>
-<tr>
-<th>項目名</th>
-<th>設定値</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Avatar</td>
-<td><img src="./avatar.jpg" alt="avatar" style="height: 200px; width:150px;"></td>
-</tr>
-<tr>
-<td>Name</td>
-<td>NGUYEN DINH HUNG</td>
-</tr>
-<tr>
-<td>Birth(Age)</td>
-<td>1990/MM/DD</td>
-</tr>
-<tr>
-<td>Nationality</td>
-<td>ベトナム</td>
-</tr>
-<tr>
-<td>Family</td>
-<td>既婚・子(一人)</td>
-</tr>
-<tr>
-<td>Location</td>
-<td>埼玉県さいたま市</td>
-</tr>
-<tr>
-<td>Education</td>
-<td>ハノイ工科大学<br>情報通信学部<br>ITSS教育能力強化プロジェクト (HEDSPI)</td>
-</tr>
-<tr>
-<td>Contact</td>
-<td>Email: <a href="mailto:hungnguyendinh1710@gmail.com">hungnguyendinh1710@gmail.com</a> <br> LineID: hungchelsea1990 <br> Phone: 080-5094-4918</td>
-</tr>
-<tr>
-<td>Interests/Hobbies</td>
-<td>サッカー、 卓球、 旅行、ゲーム、など</td>
-</tr>
-</tbody>
-</table>
-<h3 id="取得資格リスト">取得資格リスト </h3>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>資格名</th>
-<th>取得年月</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>基本情報処理技術者試験(FE)</td>
-<td>2012/10</td>
-</tr>
-<tr>
-<td>2</td>
-<td>日本語能力試験JLPT-N2</td>
-<td>2012/12</td>
-</tr>
-<tr>
-<td>3</td>
-<td>TOEIC-IPテスト 675点取得</td>
-<td>2017/09</td>
-</tr>
-<tr>
-<td>4</td>
-<td>UML Modeling Skill Certification L1</td>
-<td>2018/11</td>
-</tr>
-<tr>
-<td>5</td>
-<td>TOEICテスト 720点取得</td>
-<td>2019/01</td>
-</tr>
-<tr>
-<td>6</td>
-<td>UML Modeling Skill Certification L2</td>
-<td>2020/02</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Salesforce Certified Marketing Cloud Email Specialist</td>
-<td>2020/08</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Salesforce Certified Marketing Cloud Consultant</td>
-<td>2020/08</td>
-</tr>
-<tr>
-<td>9</td>
-<td>BJTビジネス日本語能力テストJ1</td>
-<td>2021/05</td>
-</tr>
-<tr>
-<td>10</td>
-<td>日本語能力試験JLPT-N1(146/180)</td>
-<td>2021/07</td>
-</tr>
-<tr>
-<td>11</td>
-<td>Salesforce B2C Commerce Developer</td>
-<td>2021/11</td>
-</tr>
-</tbody>
-</table>
-<h2 id="得意作業スキル">得意作業・スキル </h2>
-<p>【外国語力】：ビジネスレベル (日本語能力試験N1）<br>
-【開発期間】：12年<br>
-【開発環境】：<br>
-　言語とフレームワーク：<br>
-　・Java：JSP、JSF、EJB、SpringMVC、Play<br>
-　・.NET：C、C#、C++、<a href="http://VB.NET">VB.NET</a>、<a href="http://ASP.NET">ASP.NET</a><br>
-　・PHP：Zend、Cake、CodeIgniterなど（PSRs準拠して、自社フレームワーク構築経験あり）<br>
-　・Web一般：HTML/CCS/JS/AJAX、Angular/ReactJS<br>
-　・Nodejs<br>
-　・PL/SQL（OracleDB用）<br>
-　・DB：PostgreSQL、MySQL、SQLServer、Oracle、MongoDB、DynamoDB<br>
-　・Tools：VS Code、PhpStorm、WebStorm、IntelliJ IDEA、Eclipse、NetBeans、SourceTree、SVN/GIT　等<br>
-　・OS：Windows、Linux、Mac<br>
-　・インフラ構築(仮想環境)・構成管理：Vmware/Virtualbox、Vagrant/Docker/Ansible<br>
-　・管理ツール：Redmine、JIRA、Backlog、Trelloなど<br>
-　・設計：オブジェクト指向分析設計（UML)<br>
-　・Cloud：AWSを使って、アーキテクチャ設計、開発、運用経験あり<br>
-【工　　程】：提案活動、技術検証、システム開発全般（要件定義～リリース）、運用保守<br>
-【業務分野】：ERP製品開発、BPM製品開発、債権管理、CMS自社製品開発、B2BとB2Cコーマス（ECサイト）<br>
-【開発手法】：ウオーターフォールとアジャイル両方対</p>
-<h2 id="職務経歴">職務経歴 </h2>
-<h3 id="overview">Overview </h3>
-<p>ソフトウエア開発において、上流工程から下流工程までの流れで、<br>
-プロジェクト計画、設計、開発、テスト、リリース対応に豊富な経験を持っています。<br>
-その中で、開発コスト削減するために、オフショア開発を行って、<br>
-オフショア開発経験を通じて、コミュニケーション能力に自信があります。<br>
-上流工程、提案フェーズにおいてもアーキテクチャ検討、フィジビリティ検証を行い、<br>
-プロトタイプ作成などの作業に強みを持っています。</p>
-<p>これまで11年を振り返ってみたら、2回の転職があっても、システム開発業界において<br>
-プログラマーからプロマネまでストレートに進んできたと思っています。<br>
-これから、お仕事を取りに行くような営業活動に注力しています。</p>
-<h3 id="1-日商エレクトロニクス株式会社支社201307--201404">1. 日商エレクトロニクス株式会社（支社）(2013/07 ~ 2014/04) </h3>
-<p>従業員： 約100人</p>
-<h4 id="概要">概要 </h4>
-<ul>
-<li>大学卒業後、色々な道に迷っているが、まずはサラリーマンのキャリアをスタート</li>
-<li>オフショア開発事業部に配属され、部内であちらこちらで新人研修（約１月）</li>
-<li>詳細設計から実装・内結試験までの作業を熟するミッション（次は日本へ出向するため）</li>
-</ul>
-<h4 id="主なrole">主なRole </h4>
-<ul>
-<li>Programmer, Software Engineer</li>
-</ul>
-<h4 id="主なプロジェクト">主なプロジェクト </h4>
-<ul>
-<li>
-<p>Network trafficの統合レポーティングツール開発(WEB)</p>
-<ul>
-<li>スクラッチから開発案件</li>
-<li>Backend(Java): ネットワークデバイス(PacketShaper)から定期的にデータ取得・分析を行い、ファイルに保存。Frontend用のAPIを提供</li>
-<li>Frontend(PHP): API実行、ファイル読込により各種グラフを表示</li>
-<li>主な技術：Windows, Linux, Java, PHP(Zend2), HTML/CSS/JS, Webservice(SOAP API)</li>
-<li>作業内容：
-<ul>
-<li>最初は試験フェーズに参画して試験実施、不具合修正を支援</li>
-<li>受入から運用保守フェーズでお問い合わせ対応・障害対応、追加開発などを主担当</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>輸出入業務処理支援ツール開発(WEB)</p>
-<ul>
-<li>OpenText社のBPM製品(MBPM)をベースに、輸出入業務をBPM上で管理</li>
-<li>製品知識に依存しているところが多いため、所定場所にコーディングすればよい</li>
-<li>主な技術：C#, HTML/CSS/JS, SQL Server</li>
-<li>作業内容：
-<ul>
-<li>BPM製品(MBPM)トレーニ ングコースを受講。講師はオーストラリア人なので、英語でコミュニケーション</li>
-<li>業務プロセスをもとにワークフロー定義</li>
-<li>業務データ設計</li>
-<li>スクリプト開発</li>
-<li>特定業務の要件分析から設計、実装、テストまで経験</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>アベイラブル時の過ごし方</p>
-<ul>
-<li>独学でJavaによるWebアプリケーション開発の勉強</li>
-<li>デザインパターンを勉強</li>
-<li>日本語を練習</li>
-</ul>
-</li>
-</ul>
-<h3 id="日商エレクトロニクス株式会社本社201405--201712">日商エレクトロニクス株式会社（本社）(2014/05 ~ 2017/12) </h3>
-<p>従業員： 約600人</p>
-<h4 id="概要-1">概要 </h4>
-<ul>
-<li>キャリア開発のため、親会社へ出向</li>
-<li>今度は２回目の来日です。（１回目はインターンシップの時）</li>
-<li>日本で新しいチャンスやチャレンジなどに向けて準備</li>
-</ul>
-<h4 id="主なrole-1">主なRole </h4>
-<ul>
-<li>Software Engineer, BrSE, Sub PM</li>
-</ul>
-<h4 id="主なプロジェクト-1">主なプロジェクト </h4>
-<ul>
-<li>
-<p>ERP GRANDIT製品保守(WEB)</p>
-<ul>
-<li>発注・入荷・仕入・売上に関するERP製品を保守</li>
-<li>主な技術（古いものが多い）：<a href="http://ASP.NET">ASP.NET</a>(C#), HTML/CSS/JS, SQL Server, VSS(Visual SourceSafe)</li>
-<li>作業内容：
-<ul>
-<li>不具合修正や追加開発がメイン。業務知識不足でSQLプロシージャに苦労</li>
-<li>画面単位のモジュール分割方法やプログラムをビルド、リリースするまでの作業を経験</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>スキャナー基盤システム(追加開発)</p>
-<ul>
-<li>スキャナーのスキャンデータ(申込書、帳票など)をBPM製品(Process360)のワークフローに転送</li>
-<li>主な技術：C#/VB.NET, SQL Server</li>
-<li>作業内容：
-<ul>
-<li>スキャナー連携用の.NETライブラリを利用して、Windows Serviceアプリケーションを開発</li>
-<li>基本設計から結合テストまで主担当</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>債権管理システム開発(WEB)</p>
-<ul>
-<li>Delphi版、AdobeFlex版を運用保守すると共に、次世代としてJavaWeb版を開発</li>
-<li>POC開発から本開発まで約2年間</li>
-<li>主な技術：Windows, Linux, Delphi, Java(JSF/EJB), HTML/CSS/JS, Oracle, PL/SQL</li>
-<li>作業内容：初期構築から様々な作業を担当
-<ul>
-<li>業務要件分析、基本設計</li>
-<li>アーキテクチャー検討、処理方式設計</li>
-<li>開発ガイドの標準化</li>
-<li>オフショア開発のため、オフショアチームへ要件を伝達、進捗管理、品質管理</li>
-<li>オフショア開発拠点(ベトナム)へ出張経験</li>
-<li>日本側のブリッジSEチーム及びオフショアチームをリードする</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>寄付者管理システム(PoC)</p>
-<ul>
-<li>寄付者管理</li>
-<li>BPM製品(Process Suite)トレーニングを受講
-<ul>
-<li>ビジネスプロセスを設計</li>
-<li>外部システムへ連携</li>
-</ul>
-</li>
-<li>主な技術：Windows, Linux, Java(Play), Angular2, HTML/CSS/JS, Vagrant/Docker, Ansible, MySQL</li>
-<li>作業内容：
-<ul>
-<li>オンプレミス環境で構成管理、構築（開発、実行環境構築）</li>
-<li>BPM製品関連の課題を調査、フィジビリティ検証を主担当</li>
-<li>プロトタイプ開発支援</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>次期BPM製品開発(WEB)</p>
-<ul>
-<li>OpenText社の製品を元に、自社製品を開発</li>
-<li>主な技術：Windows, Linux, Java(SpringMVC), HTML/CSS/JS, SQL Server, Oracle</li>
-<li>作業内容：
-<ul>
-<li>受入検証フェーズに参画して、環境構築から、シナリオテストを実施</li>
-<li>オフショアチームへ不具合対応支援</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>アベイラブル時の過ごし方</p>
-<ul>
-<li>日本語を改善</li>
-<li>オフショア開発の案件を取るために提案活動（営業マンと一緒）</li>
-<li>あちらこちらのチームへ短期にアサイン</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-アクセンチュア株式会社201801--202412">2. アクセンチュア株式会社(2018/01 ~ 2024/12) </h3>
-<p>従業員： 約25000人</p>
-<h4 id="概要-2">概要 </h4>
-<ul>
-<li>新しい環境へ切り替え、引っ越し</li>
-<li>ベトナムに関係ない会社のため、ワクワクしながら、気になるところが多い</li>
-</ul>
-<h4 id="主なrole-2">主なRole </h4>
-<ul>
-<li>SE/Tech-lead/Project Manager</li>
-<li>Consultant/Presales</li>
-</ul>
-<h4 id="主なプロジェクト-2">主なプロジェクト </h4>
-<ul>
-<li>
-<p>航空会社のサイト構築(追加開発/国際線構築)</p>
-<ul>
-<li>自社製品CMSをベースに、各静的ページ、テンプレートページを作成</li>
-<li>CMS管理画面でTwigテンプレートを組み込み</li>
-<li>コンテンツデータはMongoDBに格納</li>
-<li>主な技術：Linux, Vagrant/Docker, Apache, PHP/Twig, MongoDB</li>
-<li>作業内容：
-<ul>
-<li>要件定義から画面設計、実装、試験、リリースまで担当</li>
-<li>開発時に各種コンテンツ定義のデータを設計、MongoDBへ投入</li>
-<li>サブリーダーとして、チーム内の技術課題を解決</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>製薬会社のサイト構築</p>
-<ul>
-<li>スクラッチから開発案件で人数・チームが多い中、CMSチームに配属</li>
-<li>主な技術：UML, PHP/Twig, AWS</li>
-<li>作業内容：
-<ul>
-<li>基本設計から結合試験まで参加</li>
-<li>自社CMSのコア機能をカスタマイズ開発</li>
-<li>CMSテンプレート(Twig)、Twig拡張機能(PHP)を開発</li>
-<li>AWS-Lambda関数(Nodejs)を開発</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>B2B ECサイト開発（フロント領域）</p>
-<ul>
-<li>自社フレームワークを構築する</li>
-<li>PHPから外部APIを呼び出して、APIレスポンスをもとに画面描画する</li>
-<li>Tech-lead/PMとしてソリューション設計、プロジェクト管理</li>
-<li>主な技術：UML, PHP/Twig, AWS(EC2/CloudFront/ApiGateway/Lambda/S3など)</li>
-<li>主な案件の概要：
-<ul>
-<li>C#で開発されたデスクトップアプリ上で表示するWebView版を開発</li>
-<li>ServerlessアーキテクチャーでCloudfront/ApiGateway/Lambda/S3を利用して、SPAページを開発</li>
-<li>Javaweb版から自社フレームワーク版へマイグレーション(Java-&gt;PHP)する</li>
-<li>Google翻訳APIを利用して、自動翻訳する。翻訳文字数制限のため、Amazon ElastiCacheを導入する</li>
-<li>PHP並列処理、PDF出力のライブラリを検証する</li>
-<li>トップページのパーソナライゼーションで特定ユーザに対して、コンテンツを表示させる</li>
-<li>外部の文書出力サービスを選定し、顧客要件と合わせて提案し、案件を開発する</li>
-<li>配送料表示対応で国内版のスマホアプリ(Android/iOS)機能改修を提案し、PMとして案件をリードする</li>
-<li>AIOCR実験基盤UI開発案件で要件分析フェーズから受入までSELとしてクライアントと調整しながら、WebAPIを設計する</li>
-<li>スマホアプリ開発</li>
-<li>その他：内部メンバー教育、開発ガイドライン作成など。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>B2C ECサイト開発（受注～配達）</p>
-<ul>
-<li>EC業務において、注文から出荷、配達完了、決済などを行う</li>
-<li>Tech-lead/PMとしてソリューション設計、プロジェクト管理</li>
-<li>主な技術：B2C Commerce Cloud, Serverless, SQL, NoSQL, etc.</li>
-<li>主な案件の概要：
-<ul>
-<li>決済代行導入</li>
-<li>外部課金対応</li>
-<li>電子帳簿保存法対応</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-now">3. Now~ </h3>
+    * {
+      box-sizing: border-box;
+    }
 
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Noto Sans JP", sans-serif;
+      color: var(--ink);
+      background: #eef2f7;
+      line-height: 1.62;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 250px;
+      gap: 28px;
+      align-items: center;
+      padding: 34px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent-dark);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 56px);
+      letter-spacing: 0;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .summary {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .portrait {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      background: var(--soft);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 9px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: #fff;
+      color: var(--accent-dark);
+    }
+
+    .button:hover {
+      text-decoration: none;
+      filter: brightness(0.96);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 20px 0;
+    }
+
+    .metric,
+    section,
+    .project,
+    .note {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .metric {
+      padding: 18px;
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--accent-dark);
+      font-size: 28px;
+      line-height: 1.1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    section {
+      margin-top: 18px;
+      padding: 26px;
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 4px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--soft);
+      color: #283247;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 12px;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 145px minmax(0, 1fr);
+      gap: 18px;
+      padding: 18px;
+    }
+
+    .period {
+      color: var(--blue);
+      font-weight: 800;
+    }
+
+    .project p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .project .result {
+      color: var(--warn);
+      font-weight: 800;
+      margin-top: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    th,
+    td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--soft);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .pdf-frame {
+      width: 100%;
+      height: 760px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--soft);
+    }
+
+    .note {
+      margin-top: 18px;
+      padding: 14px 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 840px) {
+      .page {
+        padding: 16px;
+      }
+
+      .hero,
+      .columns,
+      .project {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .portrait {
+        max-width: 220px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero,
+      section {
+        padding: 20px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pdf-frame {
+        height: 520px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">情報処理技術者経歴書 - 2026年05月現在</p>
+        <h1>Henry Nguyen</h1>
+        <p class="summary">
+          PM / Delivery Manager / BrSE / Tech Lead として、システム開発全般に13年の経験があります。
+          要件定義、設計、開発、テスト、リリース、運用保守に加え、提案活動とQCD管理まで一貫して対応可能です。
+          直近ではAI駆動開発、オフショア開発管理、EC、Salesforce Commerce Cloud、AWS領域を強みとしています。
+        </p>
+        <div class="actions">
+          <a class="button" href="./個人_スキル表_PM／SM／BrSE_N.D.H(Henry Nguyen).pdf">PDF原本を開く</a>
+          <a class="button secondary" href="mailto:hungnguyendinh1710@gmail.com">hungnguyendinh1710@gmail.com</a>
+        </div>
       </div>
-      
-      
-    
-    
-    
-    
-    
-    
-  
-    </body></html>
+      <img class="portrait" src="./avatar.jpg" alt="Henry Nguyen">
+    </header>
+
+    <div class="grid" aria-label="基本サマリー">
+      <div class="metric"><strong>13+</strong><span>開発実務経験</span></div>
+      <div class="metric"><strong>N1</strong><span>日本語、BJT J1</span></div>
+      <div class="metric"><strong>PM</strong><span>デリバリー、QCD、提案</span></div>
+      <div class="metric"><strong>AI</strong><span>AI駆動開発、RAG、Multi-Agent</span></div>
+    </div>
+
+    <section>
+      <h2>クイックサマリー</h2>
+      <div class="columns">
+        <div>
+          <h3>プロフィール</h3>
+          <ul>
+            <li>氏名表記: N.D.H、通称 Henry Nguyen。</li>
+            <li>ハノイ工科大学 HEDSPI卒業。</li>
+            <li>日本国内勤務およびベトナムオフショア案件を含め、13年の実務経験。</li>
+            <li>日本語はビジネスレベル、JLPT N1、BJT J1。英語はTOEIC 720点、読み書き対応可能。</li>
+          </ul>
+        </div>
+        <div>
+          <h3>強み</h3>
+          <ul>
+            <li>提案活動、要件定義、設計、開発、テスト、リリース、運用保守まで一気通貫で対応。</li>
+            <li>日本側顧客とベトナム開発チームをつなぎ、進捗、品質、コスト、リスクを管理。</li>
+            <li>Java、PHP、.NET、Node.js、フロントエンド、DB、AWS、Docker、Ansibleまで幅広い技術基盤。</li>
+            <li>生成AIを活用した実装効率化、レビュー、障害解析の推進経験。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tags">
+        <span class="tag">PM</span>
+        <span class="tag">Delivery Manager</span>
+        <span class="tag">BrSE</span>
+        <span class="tag">Tech Lead</span>
+        <span class="tag">Presales</span>
+        <span class="tag">AWS</span>
+        <span class="tag">Salesforce Commerce Cloud</span>
+        <span class="tag">EC</span>
+        <span class="tag">AI-driven Development</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>直近の職務経歴</h2>
+      <div class="timeline">
+        <article class="project">
+          <div class="period">2026/03 - 現在</div>
+          <div>
+            <h3>ケアプランデータ連携システム対応プロジェクト PM</h3>
+            <p>
+              介護ソフトにおける厚生労働省「ケアプランデータ連携システム」対応プロジェクトに、
+              要件定義フェーズから参画。AI駆動開発の導入、連携試験対応、リリースまでを牽引。
+            </p>
+            <p class="result">成果: AI駆動開発の導入により、開発工数を従来比で約50%削減。</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="period">2025/01 - 2026/03</div>
+          <div>
+            <h3>ITコンサルタント / 提案型プリセールス</h3>
+            <p>
+              営業担当と同行し、顧客ヒアリング、要件整理、見積書・提案書作成、提案説明、受注フォローまで担当。
+              基幹システム、ブロックチェーン、Salesforce、人材、不動産、無人店舗決済など複数領域に対応。
+            </p>
+            <p class="result">実績: 最大210人月、約1.2億円規模の大型案件を受注。</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="period">2025/06 - 2026/03</div>
+          <div>
+            <h3>通信業界向け顧客総合管理システム刷新 Sub PL</h3>
+            <p>
+              クライアント先に常駐し、システム基盤チームおよび運用担当者へのヒアリングを実施。
+              現行課題を整理し、TO-BE業務フローと機能要件書を作成。
+            </p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="period">2025/01 - 2026/03</div>
+          <div>
+            <h3>システム開発プロジェクト統括 PM / DM</h3>
+            <p>
+              ベトナムオフショア開発において複数案件を横断管理。
+              人材紹介マッチングサイト、求人動画アプリ、都市ガス基幹システム、EC運用、SIMサービス申込サイトなどを担当。
+            </p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="period">2019/04 - 2024/12</div>
+          <div>
+            <h3>B2B / B2C ECサイト開発 PM / Tech Lead</h3>
+            <p>
+              ECフロント、受注管理、決済、配送、外部連携領域において、
+              提案活動から要件定義、設計、リリースまでフルサイクルで担当。
+              Marketing Cloud、DOMO、KARTE、Amazon Pay、Veritrans、Sony Payment、AWS Serverless連携を推進。
+            </p>
+            <p class="result">実績: 複数案件でプロジェクト利益率30-40%をコントロール。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>主要スキル</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>カテゴリ</th>
+            <th>内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Language / Framework</td>
+            <td>Java, JSP, JSF, EJB, Spring MVC, Play, PHP, Zend, CakePHP, CodeIgniter, C, C#, C++, VB.NET, ASP.NET, Node.js, Angular, ReactJS, HTML, CSS, JavaScript, AJAX.</td>
+          </tr>
+          <tr>
+            <td>Database</td>
+            <td>PostgreSQL, MySQL, SQL Server, Oracle, MongoDB, DynamoDB, PL/SQL.</td>
+          </tr>
+          <tr>
+            <td>Cloud / Infra</td>
+            <td>AWS architecture, Lambda, API Gateway, CloudFront, S3, DynamoDB, Serverless, Vagrant, Docker, Ansible, VMware, VirtualBox.</td>
+          </tr>
+          <tr>
+            <td>Management</td>
+            <td>要件定義、見積、提案、スケジュール管理、コスト管理、リスク管理、品質管理、オフショア開発管理、リリース、運用保守、Redmine、Jira、Backlog、Trello。</td>
+          </tr>
+          <tr>
+            <td>AI</td>
+            <td>生成AI、Local / Frontier LLM、Multi-Agent、RAG、Vibe Coding、AIによるレビューおよび障害解析。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>資格</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>取得年月</th>
+            <th>資格名</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2012/10</td><td>基本情報処理技術者試験 (FE)</td></tr>
+          <tr><td>2012/12</td><td>日本語能力試験 JLPT N2</td></tr>
+          <tr><td>2019/01</td><td>TOEIC 720</td></tr>
+          <tr><td>2020/02</td><td>UML Modeling Skill Certification L2</td></tr>
+          <tr><td>2020/08</td><td>Salesforce Certified Marketing Cloud Email Specialist</td></tr>
+          <tr><td>2020/08</td><td>Salesforce Certified Marketing Cloud Consultant</td></tr>
+          <tr><td>2021/05</td><td>BJTビジネス日本語能力テスト J1</td></tr>
+          <tr><td>2021/07</td><td>日本語能力試験 JLPT N1 (146/180)</td></tr>
+          <tr><td>2021/11</td><td>Salesforce B2C Commerce Developer</td></tr>
+          <tr><td>2026/03</td><td>Google AI Essentials / Professional Certificate</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>PDF原本</h2>
+      <object class="pdf-frame" data="./個人_スキル表_PM／SM／BrSE_N.D.H(Henry Nguyen).pdf" type="application/pdf">
+        ブラウザでPDFを直接表示できない場合は、
+        <a href="./個人_スキル表_PM／SM／BrSE_N.D.H(Henry Nguyen).pdf">PDF原本</a>を開いてください。
+      </object>
+      <div class="note">
+        このHTMLは
+        <strong>個人_スキル表_PM／SM／BrSE_N.D.H(Henry Nguyen).pdf</strong>
+        をもとにしたクイック閲覧用の要約です。各プロジェクトの詳細は上記PDFをご確認ください。
+      </div>
+    </section>
+  </main>
+</body>
+</html>
