@@ -228,6 +228,14 @@
       font-weight: 800;
     }
 
+    .period small {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
     .project p {
       margin: 0;
       color: var(--muted);
@@ -319,12 +327,12 @@
   <main class="page">
     <header class="hero">
       <div>
-        <p class="eyebrow">情報処理技術者経歴書 - 2026年05月現在</p>
+        <p class="eyebrow">情報処理技術者経歴書 - 2026年06月現在</p>
         <h1>Henry Nguyen</h1>
         <p class="summary">
           PM / Delivery Manager / BrSE / Tech Lead として、システム開発全般に13年の経験があります。
           要件定義、設計、開発、テスト、リリース、運用保守に加え、提案活動とQCD管理まで一貫して対応可能です。
-          直近ではAI駆動開発、オフショア開発管理、EC、Salesforce Commerce Cloud、AWS領域を強みとしています。
+          直近ではセキュアなAI環境構築、AI駆動開発、オフショア開発管理、EC、Salesforce Commerce Cloud、AWS領域を強みとしています。
         </p>
         <div class="actions">
           <a class="button" href="./個人_スキル表_PM／SM／BrSE_N.D.H(Henry Nguyen).pdf">PDF原本を開く</a>
@@ -335,10 +343,10 @@
     </header>
 
     <div class="grid" aria-label="基本サマリー">
-      <div class="metric"><strong>13+</strong><span>開発実務経験</span></div>
+      <div class="metric"><strong>13年</strong><span>開発実務経験 / 日本勤務</span></div>
       <div class="metric"><strong>N1</strong><span>日本語、BJT J1</span></div>
       <div class="metric"><strong>PM</strong><span>デリバリー、QCD、提案</span></div>
-      <div class="metric"><strong>AI</strong><span>AI駆動開発、RAG、Multi-Agent</span></div>
+      <div class="metric"><strong>AI</strong><span>Self-hosted LLM、RAG、Multi-Agent</span></div>
     </div>
 
     <section>
@@ -347,8 +355,8 @@
         <div>
           <h3>プロフィール</h3>
           <ul>
-            <li>氏名表記: N.D.H、通称 Henry Nguyen。</li>
-            <li>ハノイ工科大学 HEDSPI卒業。</li>
+            <li>氏名表記: N.D.H、通称 Henry Nguyen。フリガナ: ヘンリー・グエン、36歳。</li>
+            <li>ハノイ工科大学 ITSS教育能力強化プロジェクト (HEDSPI) 2013年8月卒業、大卒。</li>
             <li>日本国内勤務およびベトナムオフショア案件を含め、13年の実務経験。</li>
             <li>日本語はビジネスレベル、JLPT N1、BJT J1。英語はTOEIC 720点、読み書き対応可能。</li>
           </ul>
@@ -359,6 +367,7 @@
             <li>提案活動、要件定義、設計、開発、テスト、リリース、運用保守まで一気通貫で対応。</li>
             <li>日本側顧客とベトナム開発チームをつなぎ、進捗、品質、コスト、リスクを管理。</li>
             <li>Java、PHP、.NET、Node.js、フロントエンド、DB、AWS、Docker、Ansibleまで幅広い技術基盤。</li>
+            <li>Self-hosted LLM、RAG、Multi-AgentによるセキュアなAI環境のPoC設計・構築。</li>
             <li>生成AIを活用した実装効率化、レビュー、障害解析の推進経験。</li>
           </ul>
         </div>
@@ -373,16 +382,31 @@
         <span class="tag">Salesforce Commerce Cloud</span>
         <span class="tag">EC</span>
         <span class="tag">AI-driven Development</span>
+        <span class="tag">Self-hosted LLM</span>
+        <span class="tag">RAG</span>
       </div>
     </section>
 
     <section>
-      <h2>直近の職務経歴</h2>
+      <h2>職務経歴の注目</h2>
       <div class="timeline">
         <article class="project">
-          <div class="period">2026/03 - 現在</div>
+          <div class="period">2026/04 - 現在<br><small>株式会社Bryex</small></div>
           <div>
-            <h3>ケアプランデータ連携システム対応プロジェクト PM</h3>
+            <h3>セキュアなAI環境PoC構築 ITコンサルタント / PL</h3>
+            <p>
+              企業の機密データを安全に活用するためのPoC構築プロジェクトを、ITコンサルタント兼PLとして牽引。
+              顧客のセキュリティ要件に基づき、Self-hosted LLM（オープンソースLLMのAWS環境構築）とRAG（検索拡張生成）を
+              組み合わせた独自アーキテクチャを研究・提案し、設計から実装・検証までの一連の工程を主導。
+            </p>
+            <p class="result">担当: データ漏洩リスクを考慮した基本設計、Self-hosted LLMの選定・検証、社内文書を活用したRAGの構築、実データを用いたPoC環境の構築。</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="period">2026/03 - 2026/05<br><small>株式会社Bryex</small></div>
+          <div>
+            <h3>ケアプランデータ連携システム対応プロジェクト 開発PM</h3>
             <p>
               介護ソフトにおける厚生労働省「ケアプランデータ連携システム」対応プロジェクトに、
               要件定義フェーズから参画。AI駆動開発の導入、連携試験対応、リリースまでを牽引。
@@ -392,7 +416,7 @@
         </article>
 
         <article class="project">
-          <div class="period">2025/01 - 2026/03</div>
+          <div class="period">2025/01 - 2026/03<br><small>株式会社Fabbi Japan</small></div>
           <div>
             <h3>ITコンサルタント / 提案型プリセールス</h3>
             <p>
@@ -404,37 +428,28 @@
         </article>
 
         <article class="project">
-          <div class="period">2025/06 - 2026/03</div>
-          <div>
-            <h3>通信業界向け顧客総合管理システム刷新 Sub PL</h3>
-            <p>
-              クライアント先に常駐し、システム基盤チームおよび運用担当者へのヒアリングを実施。
-              現行課題を整理し、TO-BE業務フローと機能要件書を作成。
-            </p>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="period">2025/01 - 2026/03</div>
-          <div>
-            <h3>システム開発プロジェクト統括 PM / DM</h3>
-            <p>
-              ベトナムオフショア開発において複数案件を横断管理。
-              人材紹介マッチングサイト、求人動画アプリ、都市ガス基幹システム、EC運用、SIMサービス申込サイトなどを担当。
-            </p>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="period">2019/04 - 2024/12</div>
+          <div class="period">2019/04 - 2024/12<br><small>IMJ / アクセンチュア日本</small></div>
           <div>
             <h3>B2B / B2C ECサイト開発 PM / Tech Lead</h3>
             <p>
-              ECフロント、受注管理、決済、配送、外部連携領域において、
-              提案活動から要件定義、設計、リリースまでフルサイクルで担当。
+              アクセンチュア在籍の全期間を通じて、ECフロント、受注管理、決済、配送、外部連携領域を担当。
+              B2C ECサイト（受注〜配送）とB2B ECサイト（フロント領域）の両案件において、
+              提案活動から要件定義、設計、リリースまでフルサイクルで対応。
               Marketing Cloud、DOMO、KARTE、Amazon Pay、Veritrans、Sony Payment、AWS Serverless連携を推進。
             </p>
-            <p class="result">実績: 複数案件でプロジェクト利益率30-40%をコントロール。</p>
+            <p class="result">実績: PMとして複数案件でプロジェクト利益率30-40%をコントロール。</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="period">2015/04 - 2017/05<br><small>日商エレクトロニクス（双日グループ）</small></div>
+          <div>
+            <h3>債権管理システム開発（WEB） PL / BrSE</h3>
+            <p>
+              Delphi版・Adobe Flex版を運用保守しつつ、次世代となるJava Web版をPoC段階から本開発まで約2年間にわたり推進。
+              初期構築から要件分析、基本設計、アーキテクチャー検討、処理方式設計、開発ガイドの標準化を主担当。
+            </p>
+            <p class="result">実績: ベトナムオフショア拠点へ出張し、日本側ブリッジSEチーム及びオフショアチーム（15名）をリード。</p>
           </div>
         </article>
       </div>
@@ -460,15 +475,19 @@
           </tr>
           <tr>
             <td>Cloud / Infra</td>
-            <td>AWS architecture, Lambda, API Gateway, CloudFront, S3, DynamoDB, Serverless, Vagrant, Docker, Ansible, VMware, VirtualBox.</td>
+            <td>AWS architecture, Lambda, API Gateway, CloudFront, S3, DynamoDB, Serverless, Vagrant, Docker, Ansible, Lima, VMware, VirtualBox.</td>
+          </tr>
+          <tr>
+            <td>Tools / IDE</td>
+            <td>VS Code, PhpStorm, WebStorm, IntelliJ IDEA, Eclipse, NetBeans, SourceTree, SVN / Git, Cursor, Obsidian.</td>
           </tr>
           <tr>
             <td>Management</td>
-            <td>要件定義、見積、提案、スケジュール管理、コスト管理、リスク管理、品質管理、オフショア開発管理、リリース、運用保守、Redmine、Jira、Backlog、Trello。</td>
+            <td>要件定義、見積、提案、スケジュール管理、コスト管理、リスク管理、品質管理、オフショア開発管理、リリース、運用保守、ウォーターフォール / アジャイル、Redmine、Jira、Backlog、Trello、Asana、Notion。</td>
           </tr>
           <tr>
             <td>AI</td>
-            <td>生成AI、Local / Frontier LLM、Multi-Agent、RAG、Vibe Coding、AIによるレビューおよび障害解析。</td>
+            <td>生成AI、Self-hosted / Local / Frontier LLM、Multi-Agent、RAG、Vibe Coding、AIによるレビューおよび障害解析。</td>
           </tr>
         </tbody>
       </table>
