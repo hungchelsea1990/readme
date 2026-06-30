@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Henry Nguyen - Quick Resume JP</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #5c6472;
+      --line: #d9dee8;
+      --paper: #ffffff;
+      --soft: #f5f7fb;
+      --accent: #0f766e;
+      --accent-dark: #115e59;
+      --warn: #b45309;
+      --blue: #1d4ed8;
+      --shadow: 0 16px 40px rgba(23, 32, 51, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Noto Sans JP", sans-serif;
+      color: var(--ink);
+      background: #eef2f7;
+      line-height: 1.62;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 250px;
+      gap: 28px;
+      align-items: center;
+      padding: 34px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent-dark);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 56px);
+      letter-spacing: 0;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .summary {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .portrait {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      background: var(--soft);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 9px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: #fff;
+      color: var(--accent-dark);
+    }
+
+    .button:hover {
+      text-decoration: none;
+      filter: brightness(0.96);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 20px 0;
+    }
+
+    .metric,
+    section,
+    .project,
+    .note {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .metric {
+      padding: 18px;
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--accent-dark);
+      font-size: 28px;
+      line-height: 1.1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    section {
+      margin-top: 18px;
+      padding: 26px;
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 4px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--soft);
+      color: #283247;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 12px;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 145px minmax(0, 1fr);
+      gap: 18px;
+      padding: 18px;
+    }
+
+    .period {
+      color: var(--blue);
+      font-weight: 800;
+    }
+
+    .period small {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .project p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .project .result {
+      color: var(--warn);
+      font-weight: 800;
+      margin-top: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    th,
+    td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--soft);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .pdf-frame {
+      width: 100%;
+      height: 760px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--soft);
+    }
+
+    .note {
+      margin-top: 18px;
+      padding: 14px 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 840px) {
+      .page {
+        padding: 16px;
+      }
+
+      .hero,
+      .columns,
+      .project {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .portrait {
+        max-width: 220px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero,
+      section {
+        padding: 20px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pdf-frame {
+        height: 520px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">職務経歴書 - 2026年07月現在</p>
+        <h1>Henry Nguyen</h1>
+        <p class="summary">
+          PM / Delivery Manager / BrSE / Tech Lead として、システム開発全般に13年の経験があります。
+          要件定義、設計、開発、テスト、リリース、運用保守に加え、提案活動とQCD管理まで一貫して対応可能です。
+          直近ではセキュアなAI環境構築、AI駆動開発、オフショア開発管理、EC、Salesforce Commerce Cloud、AWS領域を強みとしています。
+        </p>
+        <div class="actions">
+          <a class="button" href="./【職務経歴書】_グエンディンフン_202607.pdf">PDF原本を開く</a>
+          <a class="button secondary" href="mailto:hungnguyendinh1710@gmail.com">hungnguyendinh1710@gmail.com</a>
+        </div>
+      </div>
+      <img class="portrait" src="./avatar.jpg" alt="Henry Nguyen">
+    </header>
+
+    <div class="grid" aria-label="基本サマリー">
+      <div class="metric"><strong>13年</strong><span>実務開発経験 / 日本勤務</span></div>
+      <div class="metric"><strong>N1</strong><span>日本語、BJT J1</span></div>
+      <div class="metric"><strong>PM</strong><span>デリバリー、QCD、提案</span></div>
+      <div class="metric"><strong>AI</strong><span>Self-hosted LLM、RAG、Multi-Agent</span></div>
+    </div>
+
+    <section>
+      <h2>クイックサマリー</h2>
+      <div class="columns">
+        <div>
+          <h3>プロフィール</h3>
+          <ul>
+            <li>氏名表記: NGUYEN DINH HUNG、通称 Henry Nguyen。フリガナ: グエン ディン フン、36歳。</li>
+            <li>ハノイ工科大学 情報技術学部 2013年8月卒業（大卒）。在学中にプログラミング、アルゴリズム、ネットワーク、セキュリティ、Web開発と並行して日本語を習得。</li>
+            <li>2013年の入社以来、日本国内勤務とベトナムオフショアを通じて一貫してIT業界で約13年のキャリア。</li>
+            <li>日本語はビジネスレベル（JLPT N1・BJT J1）、英語はTOEIC 720点で読み書き対応可能。</li>
+          </ul>
+        </div>
+        <div>
+          <h3>強み</h3>
+          <ul>
+            <li>プログラマー・設計からブリッジSE、PL、テックリード、PM／デリバリーマネージャーまで、現場とマネジメント双方を経験。</li>
+            <li>提案活動・要件定義から設計、開発、テスト、リリース、運用保守までを一気通貫で対応。</li>
+            <li>日本側顧客とベトナムオフショアチームをつなぎ、QCD（品質・コスト・納期）とリスクを横断管理。PMとして利益率30〜40%をコントロールした実績。</li>
+            <li>プリセールスとして最大210人月・約1.2億円規模の大型案件を受注。</li>
+            <li>Java、PHP、.NET、Node.js、フロントエンド、DB、AWS、Docker、Ansibleまで幅広い技術基盤。</li>
+            <li>Self-hosted LLM・RAG・Multi-AgentによるセキュアなAI環境のPoC設計・構築、AI駆動開発で開発工数を従来比で約50%削減。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tags">
+        <span class="tag">PM</span>
+        <span class="tag">Delivery Manager</span>
+        <span class="tag">BrSE</span>
+        <span class="tag">Tech Lead</span>
+        <span class="tag">Presales</span>
+        <span class="tag">AWS</span>
+        <span class="tag">Salesforce Commerce Cloud</span>
+        <span class="tag">EC</span>
+        <span class="tag">AI-driven Development</span>
+        <span class="tag">Self-hosted LLM</span>
+        <span class="tag">RAG</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>自己PR</h2>
+      <p>
+        皆さま、はじめまして。ヘンリー・グエンと申します。よろしくお願いいたします。
+        私はベトナムのハノイ工科大学で、プログラミング、アルゴリズム、ネットワーク、セキュリティ、Web開発を学び、
+        同時に日本語も勉強してまいりました。卒業後の2013年から現在まで、約13年間、一貫してIT業界でキャリアを積んでおります。
+      </p>
+      <p>
+        最初の約4年半は、双日グループの日商エレクトロニクス株式会社で勤務いたしました。
+        プログラマーとしてスタートし、ERP製品、BPM製品、債権管理システムなどの開発を担当しながら、
+        詳細設計、基本設計、そしてブリッジSEやプロジェクトリーダーへステップアップしてまいりました。
+        この時期に、ベトナムのオフショアチームと日本側をつなぐブリッジ役の経験を積むことができました。
+      </p>
+      <p>
+        その後の約7年間は、IMJ、後のアクセンチュア日本で勤務いたしました。
+        B2B・B2CのECサイト開発や、製菓会社・航空会社のサイト構築といった案件に、
+        コンサルタント、テックリード、そしてプロジェクトマネージャーとして携わってまいりました。
+        要件定義からリリースまでを一貫して担当し、PMとしてプロジェクトの損益管理も行い、利益率を30〜40パーセントでコントロールすることができました。
+      </p>
+      <p>
+        2021年ごろからは、これまでのシステム開発全般の経験と幅広い業務分野の知識を活かし、プリセールスとしての活動にも力を入れてまいりました。
+        お客様へのヒアリングから、提案書・見積書の作成、提案説明、受注までを一貫して担当し、
+        最大で210人月、約1億2千万円規模の大型案件の受注につなげることができました。
+      </p>
+      <p>
+        ここ最近は、生成AIの実務活用に特に注力しております。直近では、企業の機密データを安全に扱う「セキュアAI」のPoC構築や、
+        介護ソフトの厚生労働省連携プロジェクトを担当いたしました。
+        このプロジェクトでは、AI駆動開発を導入することで、開発工数を従来比でおよそ50パーセント削減することができました。
+      </p>
+      <p>
+        日本語につきましては、日本語能力試験のN1、およびビジネス日本語のBJT J1を取得しており、
+        お客様との折衝や、仕様書の作成・読解も問題なく対応できると考えております。
+        将来的には、これまで培ってきた技術への理解を活かし、日本とベトナム、双方の市場をつなぐ、
+        新しい価値のあるサービスを生み出していきたいと考えております。どうぞよろしくお願いいたします。
+      </p>
+    </section>
+
+    <section>
+      <h2>職務経歴の注目</h2>
+      <div class="timeline">
+        <article class="project">
+          <div class="period">2026/04 - 2026/06<br><small>オフショア開発企業</small></div>
+          <div>
+            <h3>セキュアなAI環境PoC構築 ITコンサルタント / PL</h3>
+            <p>
+              企業の機密データを安全に活用するためのPoC構築プロジェクトを、ITコンサルタント兼PLとして牽引。
+              顧客のセキュリティ要件に基づき、Self-hosted LLM（オープンソースLLMのAWS環境構築）とRAG（検索拡張生成）を
+              組み合わせた独自アーキテクチャを研究・提案し、設計から実装・検証までの一連の工程を主導。
+            </p>
+            <p class="result">担当: データ漏洩リスクを考慮した基本設計、Self-hosted LLMの選定・検証、社内文書を活用したRAGの構築、実データを用いたPoC環境の構築。</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="period">2026/03 - 2026/05<br><small>オフショア開発企業</small></div>
+          <div>
+            <h3>ケアプランデータ連携システム対応プロジェクト 開発PM</h3>
+            <p>
+              介護ソフトにおける厚生労働省「ケアプランデータ連携システム」対応プロジェクトに、
+              要件定義フェーズから参画。AI駆動開発の導入、連携試験対応、リリースまでを牽引。
+            </p>
+            <p class="result">成果: AI駆動開発の導入により、開発工数を従来比で約50%削減。</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="period">2025/01 - 2026/03<br><small>オフショア開発企業</small></div>
+          <div>
+            <h3>ITコンサルタント / 提案型プリセールス</h3>
+            <p>
+              営業担当と同行し、顧客ヒアリング、要件整理、見積書・提案書作成、提案説明、受注フォローまで担当。
+              基幹システム、ブロックチェーン、Salesforce、人材、不動産、無人店舗決済など複数領域に対応。
+            </p>
+            <p class="result">実績: 最大210人月、約1.2億円規模の大型案件を受注。</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="period">2025/01 - 2026/03<br><small>オフショア開発企業</small></div>
+          <div>
+            <h3>システム開発プロジェクト統括 PM / Delivery Manager</h3>
+            <p>
+              ベトナムのオフショア開発において、デリバリーマネージャー兼PMとして複数案件を統括。
+              人材紹介マッチングサイト、都市ガス基幹システムのリプレイス、楽器・機材通販EC、音声／データSIMサービス申込サイトなどを並行して管理し、
+              QCD（品質・コスト・納期）責任を担いながら顧客折衝と提案活動による継続受注に貢献。
+              通信業界向け顧客総合管理システム刷新プロジェクト（30名規模）ではSub PLとして要件定義フェーズを牽引。
+            </p>
+            <p class="result">担当: 進捗・品質・コストの横断管理、スコープ変更・リスク管理、マスタースケジュール／開発体制設計、リソース計画と継続的な最適化。</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="period">2019/04 - 2024/12<br><small>IMJ / アクセンチュア日本</small></div>
+          <div>
+            <h3>B2B / B2C ECサイト開発 PM / Tech Lead</h3>
+            <p>
+              アクセンチュア在籍の全期間を通じて、ECフロント、受注管理、決済、配送、外部連携領域を担当。
+              B2C ECサイト（受注〜配送）とB2B ECサイト（フロント領域）の両案件において、
+              提案活動から要件定義、設計、リリースまでフルサイクルで対応。
+              Marketing Cloud、DOMO、KARTE、Amazon Pay、Veritrans、Sony Payment、AWS Serverless連携を推進。
+            </p>
+            <p class="result">実績: PMとして複数案件でプロジェクト利益率30-40%をコントロール。</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="period">2015/04 - 2017/05<br><small>日商エレクトロニクス（双日グループ）</small></div>
+          <div>
+            <h3>債権管理システム開発（WEB） PL / BrSE</h3>
+            <p>
+              Delphi版・Adobe Flex版を運用保守しつつ、次世代となるJava Web版をPoC段階から本開発まで約2年間にわたり推進。
+              初期構築から要件分析、基本設計、アーキテクチャー検討、処理方式設計、開発ガイドの標準化を主担当。
+            </p>
+            <p class="result">実績: ベトナムオフショア拠点へ出張し、日本側ブリッジSEチーム及びオフショアチーム（15名）をリード。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>主要スキル</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>カテゴリ</th>
+            <th>内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Language / Framework</td>
+            <td>Java, JSP, JSF, EJB, Spring MVC, Play, PHP, Zend, CakePHP, CodeIgniter, C, C#, C++, VB.NET, ASP.NET, Node.js, Angular, ReactJS, HTML, CSS, JavaScript, AJAX.</td>
+          </tr>
+          <tr>
+            <td>Database</td>
+            <td>PostgreSQL, MySQL, SQL Server, Oracle, MongoDB, DynamoDB, PL/SQL.</td>
+          </tr>
+          <tr>
+            <td>Cloud / Infra</td>
+            <td>AWS architecture, Lambda, API Gateway, CloudFront, S3, DynamoDB, Serverless, Vagrant, Docker, Ansible, Lima, VMware, VirtualBox.</td>
+          </tr>
+          <tr>
+            <td>Tools / IDE</td>
+            <td>VS Code, PhpStorm, WebStorm, IntelliJ IDEA, Eclipse, NetBeans, SourceTree, SVN / Git, Cursor, Obsidian.</td>
+          </tr>
+          <tr>
+            <td>Management</td>
+            <td>要件定義、見積、提案、スケジュール管理、コスト管理、リスク管理、品質管理、オフショア開発管理、リリース、運用保守、ウォーターフォール / アジャイル、Redmine、Jira、Backlog、Trello、Asana、Notion。</td>
+          </tr>
+          <tr>
+            <td>AI</td>
+            <td>生成AI、Self-hosted / Local / Frontier LLM、Multi-Agent、RAG、Vibe Coding、AIによるレビューおよび障害解析。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>資格</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>取得年月</th>
+            <th>資格名</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2012/10</td><td>基本情報処理技術者試験 (FE)</td></tr>
+          <tr><td>2012/12</td><td>日本語能力試験 JLPT N2</td></tr>
+          <tr><td>2019/01</td><td>TOEIC 720</td></tr>
+          <tr><td>2020/02</td><td>UML Modeling Skill Certification L2</td></tr>
+          <tr><td>2020/08</td><td>Salesforce Certified Marketing Cloud Email Specialist</td></tr>
+          <tr><td>2020/08</td><td>Salesforce Certified Marketing Cloud Consultant</td></tr>
+          <tr><td>2021/05</td><td>BJTビジネス日本語能力テスト J1</td></tr>
+          <tr><td>2021/07</td><td>日本語能力試験 JLPT N1 (146/180)</td></tr>
+          <tr><td>2021/11</td><td>Salesforce B2C Commerce Developer</td></tr>
+          <tr><td>2026/03</td><td>Google AI Essentials / Professional Certificate</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>PDF原本</h2>
+      <object class="pdf-frame" data="./【職務経歴書】_グエンディンフン_202607.pdf" type="application/pdf">
+        ブラウザでPDFを直接表示できない場合は、
+        <a href="./【職務経歴書】_グエンディンフン_202607.pdf">PDF原本</a>を開いてください。
+      </object>
+      <div class="note">
+        このHTMLは
+        <strong>【職務経歴書】_グエンディンフン_202607.pdf</strong>
+        をもとにしたクイック閲覧用の要約です。各プロジェクトの詳細は上記PDFをご確認ください。
+      </div>
+    </section>
+  </main>
+</body>
+</html>
